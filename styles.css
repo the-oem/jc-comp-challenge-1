@@ -66,39 +66,7 @@ body {
 }
 
 
-/* Section images */
-
-
-/*.iconography .section-image {
-  background-image: url('images/icons/icon-iconography.jpg');
-}
-
-.in-film .section-image {
-  background-image: url('images/icons/icon-film.jpg');
-}
-
-.in-politics .section-image {
-  background-image: url('images/icons/icon-politics.jpg');
-}
-
-.influence .section-image {
-  background-image: url('images/icons/icon-influence.jpg');
-}
-
-.history .section-image {
-  background-image: url('images/icons/icon-history.jpg');
-}
-
-.photography .section-image {
-  background-image: url('images/icons/icon-photography.jpg');
-}
-
-.social-media .section-image {
-  background-image: url('images/icons/icon-social-media.jpg');
-}*/
-
-
-/* Transparent icons */
+/* Transparent section images */
 
 .iconography .section-image {
   background-image: url('images/icons/icon-panda-transparent.png');
@@ -135,6 +103,7 @@ body {
   display: flex;
   flex: 1;
   min-width: 33.333%;
+  height: 33.333vh;
 }
 
 .section {
@@ -149,12 +118,41 @@ body {
 }
 
 
-/*#607D8B; }
-.light-primary-color   { background: #CFD8DC*/
+/* Content styling and layout */
 
 .heading {
   flex: 2;
+  flex-direction: column;
+  justify-content: center;
+  height: 33.333vh;
   min-width: 66.666%;
+  background-image: url('images/banksy-graffiti-transparent.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-blend-mode: soft-light;
+  opacity: 0.8;
+  color: #CFD8DC;
+  padding: 10px;
+}
+
+.iconography {
+  height: 33.333vh;
+}
+
+.button-container {
+  margin: 20px 0;
+}
+
+h1 {
+  margin: 20px 5px;
+}
+
+.heading p {
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  margin: 5px;
 }
 
 .iconography {
@@ -178,9 +176,35 @@ body {
   font-size: 26px;
 }
 
-.section-intro {
+.text-intro {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
+}
+
+
+/* Button Styling */
+
+a.button {
+  height: 30px;
+  text-decoration: none;
+  color: #CFD8DC;
+  font-family: inherit;
+  font-size: 24px;
+}
+
+a.button:hover {
+  cursor: pointer;
+  color: #FFF;
+  text-decoration: underline;
+}
+
+a.button img {
+  box-sizing: content-box;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
 }
 
 
@@ -188,11 +212,11 @@ body {
 
 @media screen and (min-width: 1450px) {
   .section-image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
   .section-title {
-    font-size: 34px;
+    font-size: 40px;
   }
 }
 
@@ -200,6 +224,9 @@ body {
 /*iPad Pro*/
 
 @media screen and (max-width: 1024px) {
+  .box {
+    height: 25vh;
+  }
   .main-container {
     flex-direction: column-reverse;
   }
@@ -217,16 +244,20 @@ body {
   }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 680px) {
   .section-title {
     font-size: 20px;
   }
+  .heading p {
+    font-size: 22px;
+  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .box {
     min-width: 50%;
     flex-direction: row;
+    height: 17vh;
   }
   .secondary-container {
     height: 85vh;
@@ -237,6 +268,10 @@ body {
   .heading {
     min-width: 100%;
   }
+  .title,
+  .button-container {
+    margin: 5px;
+  }
   .section-image {
     width: 70px;
     height: 70px;
@@ -246,8 +281,14 @@ body {
   .section-title {
     display: inline-block;
   }
-  .section-intro {
+  .text-intro {
     display: none;
+  }
+  .heading {
+    flex-direction: column;
+  }
+  .heading p {
+    font-size: 18px;
   }
 }
 
@@ -255,20 +296,46 @@ body {
 /*iPhone 6 Plus*/
 
 @media screen and (max-width: 414px) {
+  .title {
+    margin: 2px;
+  }
+  .heading p {
+    font-size: 12px;
+  }
+  .box {
+    height: 20vh;
+  }
   .main-container {
     height: 100vh;
   }
   .hero-container {
     display: none;
   }
+  .button-container {
+    margin: 5px;
+  }
+  a.button,
+  a.button:hover {
+    font-size: 16px;
+  }
+  a.button img {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 
 /*iPhone 5*/
 
-
-/*@media screen and (max-width: 320px) {
-  .hero-container {
-    display: none;
+@media screen and (max-width: 320px) {
+  .heading p {
+    font-size: 10px;
   }
-}*/
+  .section-title {
+    font-size: 18px;
+  }
+  .section-image {
+    width: 50px;
+    height: 50px;
+  }
+}
