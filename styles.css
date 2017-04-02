@@ -55,6 +55,9 @@ body {
 }
 
 .hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 40%;
   height: 100vh;
   flex: 2;
@@ -161,8 +164,6 @@ h1 {
 
 .section-image {
   display: block;
-  /*border: 1px solid #000000;
-  border-radius: 100%;*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -207,6 +208,16 @@ a.button img {
   padding: 0 10px;
 }
 
+.fa {
+  opacity: 0.4;
+  margin: 0 20px;
+}
+
+.fa:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
 
 /*Big monitors and screens*/
 
@@ -245,9 +256,7 @@ a.button img {
 }
 
 @media screen and (max-width: 680px) {
-  .section-title {
-    font-size: 20px;
-  }
+  .section-title,
   .heading p {
     font-size: 22px;
   }
